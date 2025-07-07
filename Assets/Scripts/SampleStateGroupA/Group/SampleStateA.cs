@@ -10,6 +10,14 @@ public class SampleStateA : BaseState
     {
         
     }
+
+    public override BaseState SwitchState()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            return SampleStateGroupA.sampleStateB;
+
+        return null;
+    }
     public override void ExitState()
     {
         

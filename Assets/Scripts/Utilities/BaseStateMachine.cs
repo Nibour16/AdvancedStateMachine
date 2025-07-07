@@ -22,5 +22,12 @@ public class BaseStateMachine: MonoBehaviour
     public virtual void Update()
     {
         CurrentState?.UpdateState();
+
+        #region Switch state
+        BaseState newState = CurrentState?.SwitchState();
+        
+        if (newState != null)
+            SetState(newState);
+        #endregion
     }
 }
