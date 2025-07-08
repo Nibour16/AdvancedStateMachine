@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class SampleStateMachine : BaseStateMachine
 {
     #region Referencing all state groups
