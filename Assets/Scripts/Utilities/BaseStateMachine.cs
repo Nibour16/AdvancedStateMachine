@@ -1,8 +1,23 @@
 using UnityEngine;
 
-public class BaseStateMachine: MonoBehaviour
+public abstract class BaseStateMachine: MonoBehaviour
 {
+    [SerializeField] protected BaseStateMachine nextStateMachine;
     protected BaseState CurrentState;
+
+    protected virtual void OnEnable()
+    {
+        if (nextStateMachine != null)
+        {
+            if (nextStateMachine.enabled)
+            {
+                if (nextStateMachine == this)
+                    Debug.Log("Next state machine cannot be self");
+
+                nextStateMachine.enabled = false;
+            }
+        }
+    }
 
     public virtual void SetState(BaseState newState)
     {
@@ -17,5 +32,16 @@ public class BaseStateMachine: MonoBehaviour
     public virtual void Update()
     {
         CurrentState?.UpdateState();
+    }
+
+    public virtual void SwitchStateMachine()
+    {
+        if (nextStateMachine == null)
+            Debug.Log("Variable nextStateMachine is not set!");
+        else
+        {
+            nextStateMachine.enabled = true;
+            enabled = false;
+        }
     }
 }

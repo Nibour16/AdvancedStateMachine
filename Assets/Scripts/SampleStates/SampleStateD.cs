@@ -1,22 +1,22 @@
 using UnityEngine;
 
-public class SampleStateC : BaseState
+public class SampleStateD : BaseState
 {
-    private SampleStateMachine _stateMachine;
+    private SampleStateMachine2 _stateMachine;
 
-    public SampleStateC(SampleStateMachine stateMachine)
+    public SampleStateD(SampleStateMachine2 stateMachine)
     {
         _stateMachine = stateMachine;
     }
 
     public override void EnterState()
     {
-        Debug.Log("Enter State C");
+        Debug.Log("Enter State D");
     }
     public override void UpdateState()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-            _stateMachine.SwitchStateMachine();
+            _stateMachine.SetState(_stateMachine.SampleStateE);
     }
     public override void ExitState()
     {

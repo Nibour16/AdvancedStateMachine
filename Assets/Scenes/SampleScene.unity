@@ -350,6 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1497527101}
   - component: {fileID: 1497527102}
+  - component: {fileID: 1497527103}
   m_Layer: 0
   m_Name: StateMachine
   m_TagString: Untagged
@@ -384,6 +385,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0279c34bfc46ceb479935bee9b227320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextStateMachine: {fileID: 1497527103}
+--- !u!114 &1497527103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497527100}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b907184d0dffec408d38dc4e5c1bfc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextStateMachine: {fileID: 1497527102}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,17 +1,17 @@
 using UnityEngine;
 
-public class SampleStateC : BaseState
+public class SampleStateE : BaseState
 {
-    private SampleStateMachine _stateMachine;
+    private SampleStateMachine2 _stateMachine;
 
-    public SampleStateC(SampleStateMachine stateMachine)
+    public SampleStateE(SampleStateMachine2 stateMachine)
     {
         _stateMachine = stateMachine;
     }
 
     public override void EnterState()
     {
-        Debug.Log("Enter State C");
+        Debug.Log("Enter State E");
     }
     public override void UpdateState()
     {

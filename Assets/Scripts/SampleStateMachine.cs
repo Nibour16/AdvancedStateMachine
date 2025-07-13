@@ -19,8 +19,9 @@ public class SampleStateMachine : BaseStateMachine
         _sampleStateC = new(this);
     }
 
-    private void Start()
+    protected override void OnEnable()
     {
+        base.OnEnable();
         SetState(SampleStateA);
     }
 }
