@@ -4,11 +4,6 @@ public class BaseStateMachine: MonoBehaviour
 {
     protected BaseState CurrentState;
 
-    public virtual void SetState(BaseStateGroup newStateGroup)
-    {
-        SetState(newStateGroup.initialState);
-    }
-
     public virtual void SetState(BaseState newState)
     {
         // exit the current state if it is available
