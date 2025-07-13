@@ -1,13 +1,8 @@
 using UnityEngine;
 
-public class BaseStateMachine: MonoBehaviour
+public abstract class BaseStateMachine: MonoBehaviour
 {
     protected BaseState CurrentState;
-
-    public virtual void SetState(BaseStateGroup newStateGroup)
-    {
-        SetState(newStateGroup.initialState);
-    }
 
     public virtual void SetState(BaseState newState)
     {
